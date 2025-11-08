@@ -1,0 +1,56 @@
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a0a0a; /* 深色背景 */
+  overflow: hidden;
+}
+
+.map-area {
+  position: relative;
+  width: 600px; /* 地图总宽高，可调整 */
+  height: 600px;
+  background-color: #1a1a1a; /* 草地/内部区域 */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+/* 道路通用样式 */
+.road {
+  position: absolute;
+  background-color: #4caf50; /* 绿色道路 */
+  z-index: 1;
+}
+
+/* 上下道路：宽 = 地图宽，高 = 道路宽度 */
+.road.top,
+.road.bottom {
+  width: 100%;
+  height: 40px; /* 道路宽度 */
+  left: 0;
+}
+
+.road.top {
+  top: 0;
+}
+
+.road.bottom {
+  bottom: 0;
+}
+
+/* 左右道路：高 = 地图高 - 2 * 道路宽度（避免与上下重叠） */
+.road.left,
+.road.right {
+  width: 40px;
+  height: calc(100% - 80px); /* 600 - 2*40 = 520 */
+  top: 40px; /* 从上道路下方开始 */
+}
+
+.road.left {
+  left: 0;
+}
+
+.road.right {
+  right: 0;
+}

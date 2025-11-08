@@ -1,0 +1,25 @@
+.tower {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #6a5acd; /* 默认紫色 */
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.tower-arrow {
+  background-color: #4caf50;
+} /* 绿色箭塔 */
+.tower-cannon {
+  background-color: #ff5722;
+} /* 橙色炮塔 */
+.tower-magic {
+  background-color: #9c27b0;
+} /* 紫色魔法塔 */
+
+.tower-level {
+  pointer-events: none;
+}
